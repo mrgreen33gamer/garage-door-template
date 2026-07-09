@@ -176,7 +176,7 @@ export default function Footer() {
       <div className={styles.bottomBar}>
         <div className={styles.bottomInner}>
           <p className={styles.copyright}>
-            &copy; {new Date().getFullYear()} Summit Door Pros. All Rights Reserved. | IDA-Trained · Bonded & Insured
+            &copy; {new Date().getFullYear()} Summit Door Pros. All Rights Reserved. | IDA-Trained Â· Bonded & Insured
           </p>
           <a href="tel:+12547201100" className={styles.emergencyBtn}
             onClick={() => trackEvent({ eventType: 'phone_click', elementLabel: '24/7 Emergency', section: 'Footer-Bottom' })}>

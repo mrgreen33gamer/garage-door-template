@@ -35,36 +35,42 @@ export default function HomePage() {
       title: "Garage Door Repair",
       body: "Same-day diagnosis on off-track doors, rollers, hinges, cables, and noisy operation. We stock common parts on every truck — most repairs completed in one visit.",
       link: "/services/garage-door-repair",
+      image: "/pages/home/services/service-1.jpg",
     },
     {
       icon: faLink,
       title: "Spring & Cable Repair",
       body: "Torsion and extension spring replacement, cable re-stringing, and door balancing — with a Lifetime Spring Warranty on every spring job.",
       link: "/services/spring-cable-repair",
+      image: "/pages/home/services/service-2.jpg",
     },
     {
       icon: faDoorOpen,
       title: "New Door Installation",
       body: "Steel, insulated, carriage-house, and custom residential doors sized and installed for curb appeal, security, and Texas heat.",
       link: "/services/new-door-installation",
+      image: "/pages/home/services/service-3.jpg",
     },
     {
       icon: faCogs,
       title: "Opener Installation",
       body: "Chain, belt, and smart openers with photo-eyes, wall controls, and app setup — quiet, reliable access every day.",
       link: "/services/opener-installation",
+      image: "/pages/home/services/service-4.jpg",
     },
     {
       icon: faClipboardList,
       title: "Door Maintenance Plans",
       body: "Tune-ups, lubrication, balance checks, and safety reverse testing so small issues never leave you stranded.",
       link: "/services/door-maintenance",
+      image: "/pages/home/services/service-1.jpg",
     },
     {
       icon: faBuilding,
       title: "Commercial Doors",
       body: "Rolling steel, sectional, and high-cycle commercial door service for warehouses, retail, and multi-unit properties.",
       link: "/services/commercial-doors",
+      image: "/pages/home/services/service-2.jpg",
     },
   ];
 
@@ -180,13 +186,10 @@ export default function HomePage() {
 
   return (
     <main className={styles.pageWrapper}>
-
       <WelcomePage />
-
       <TrustBar
         headline="Waco's trusted garage door company — IDA-trained, insured, and warrantied on every job"
       />
-
       <div className={styles.section}>
         <ImpactMetrics
           title="Numbers That Speak for Us"
@@ -194,14 +197,21 @@ export default function HomePage() {
           cityName="Waco"
         />
       </div>
-
+      <CTABanner
+        headline="Garage Door Stuck? We Roll Fast."
+        subline="Springs, openers, and full door replacements — same-day service across Central Texas."
+        primaryText="Call (254) 720-1100"
+        primaryLink="tel:+12547201100"
+        secondaryText="Book Door Tech"
+        secondaryLink="/contact"
+        imageSrc="/pages/home/welcome/hero-main.jpg"
+      />
       <div className={styles.section}>
         <ServiceCardComponent
           heading="Complete Garage Door Services for Your Home"
           cards={services}
         />
       </div>
-
       <div className={styles.section}>
         <WhyChooseUs
           cityName="Waco"
@@ -209,7 +219,6 @@ export default function HomePage() {
           title="What Makes Summit Door Pros Different"
         />
       </div>
-
       <div className={styles.section}>
         <Variant4
           title="Request Service or a Free Quote"
@@ -219,28 +228,15 @@ export default function HomePage() {
           formVariant={2}
         />
       </div>
-
       <div className={styles.section}>
         <ProcessTimeline steps={processSteps} />
       </div>
-
       <div className={styles.section}>
         <Testimonials testimonials={reviews} />
       </div>
-
       <div className={styles.section}>
         <GuaranteeSection />
       </div>
-
-      <CTABanner
-        headline="Door Won't Open? Spring Broke? We're Ready Right Now."
-        subline="Same-day appointments across Waco, Hewitt, Woodway, Temple, and all of Central Texas. Flat-rate pricing. Lifetime Spring Warranty + 2-Year Workmanship."
-        primaryText="Call (254) 720-1100"
-        primaryLink="tel:+12547201100"
-        secondaryText="Book Online"
-        secondaryLink="/contact"
-      />
-
       <div className={styles.section}>
         <LocalServiceAreas
           cityName="Waco"
@@ -249,14 +245,12 @@ export default function HomePage() {
           title="Serving All of Central Texas"
         />
       </div>
-
       <div className={styles.section}>
         <WhatToExpect
           sectionTitle="Every Service Call, Every Time"
           expectations={expectations}
         />
       </div>
-
       <div className={styles.section}>
         <FAQ
           cityName="Waco"
@@ -264,11 +258,9 @@ export default function HomePage() {
           title="Garage Door Questions — Answered Straight"
         />
       </div>
-
       <div className={styles.section}>
         <BlogPreviewGrid />
       </div>
-
     </main>
   );
 }
