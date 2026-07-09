@@ -129,18 +129,21 @@ function ToggleSwitch({
 
 function PanelChrome({ children }: { children: React.ReactNode }) {
   return (
-    <div className={styles.panel}>
+    <div className={`${styles.panel} ${styles.remotePanel}`}>
       <div className={styles.panelBezel} aria-hidden="true">
-        <span className={styles.screw} />
-        <span className={styles.screw} />
-        <span className={styles.panelTitle}>CONTROL</span>
-        <span className={styles.screw} />
-        <span className={styles.screw} />
+        <span className={styles.remoteLed} />
+        <span className={styles.panelTitle}>DOOR REMOTE</span>
+        <span className={styles.remoteLed} />
+      </div>
+      <div className={styles.remoteButtons} aria-hidden="true">
+        <span className={`${styles.remoteBtn} ${styles.remoteBtnMain}`}>OPEN</span>
+        <span className={styles.remoteBtn}>STOP</span>
+        <span className={styles.remoteBtn}>CLOSE</span>
       </div>
       <div className={styles.panelStatus} aria-hidden="true">
         <span className={styles.statusLed} />
-        <span className={styles.statusText}>SYSTEM ACTIVE</span>
-        <span className={styles.statusTime}>LIVE</span>
+        <span className={styles.statusText}>SIGNAL LOCKED</span>
+        <span className={styles.statusTime}>RF</span>
       </div>
       <div className={styles.panelBody}>{children}</div>
     </div>
