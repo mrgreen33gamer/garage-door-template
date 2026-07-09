@@ -1,58 +1,37 @@
 // src/app/services/layout.tsx
-// ─────────────────────────────────────────────────────────────────────────────
-// ✅ FIX: This file was previously a copy of
-//    /services/website-design/killeen-tx/layout.tsx (KilleenWebDesignLayout).
-//    That caused a metadata collision — Google saw Killeen keyword targeting
-//    on the /services parent route.
-//
-//    This is now the correct /services parent layout with:
-//    - Broad "all services" metadata (no city/keyword cannibalization)
-//    - OfferCatalog schema listing all 4 services
-//    - BreadcrumbList for the /services route
-// ─────────────────────────────────────────────────────────────────────────────
+// Summit Door Pros — /services parent layout
 import type { Metadata } from "next";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://hvac-pro-template.vercel.app';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.summitdoorpros.com';
 const url = `${BASE_URL}/services`;
 
 export const metadata: Metadata = {
-  title: "Services | Web Design, Software, Branding & Marketing | Scott Applications",
+  title: "Garage Door Services | Repair, Springs, Openers & More | Summit Door Pros",
   description:
-    "Scott Applications offers custom web design, software engineering, graphic design, and digital marketing for Central Texas businesses. Fixed pricing, no contracts, you own everything.",
+    "Summit Door Pros offers garage door repair, spring & cable repair, new door installation, opener installation, maintenance plans, and commercial doors for Waco and Central Texas. IDA-trained, Lifetime Spring Warranty + 2-Year Workmanship.",
   keywords: [
-    "web design Waco TX",
-    "custom software Central Texas",
-    "graphic design Waco",
-    "digital marketing Waco TX",
-    "Scott Applications services",
-    "digital agency Waco Texas",
-    "website development Central Texas",
-    "local SEO Waco",
+    "garage door repair Waco TX",
+    "garage door services Waco",
+    "spring replacement Central Texas",
+    "garage door opener installation Waco TX",
+    "garage door company Texas",
+    "commercial garage doors Waco",
+    "IDA trained garage door Waco",
   ],
-  alternates: {
-    canonical: url,
-  },
+  alternates: { canonical: url },
   openGraph: {
-    title: "Services | Web Design, Software, Branding & Marketing | Scott Applications",
+    title: "Garage Door Services | Summit Door Pros",
     description:
-      "Custom websites, software, branding, and marketing for Central Texas businesses. Fixed price, no contracts, direct developer access.",
+      "Repair, springs, new doors, openers, maintenance, and commercial doors for Waco and Central Texas. IDA-trained, Lifetime Spring Warranty + 2-Year Workmanship.",
     url,
-    siteName: "Scott Applications",
+    siteName: "Summit Door Pros",
     locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: `${BASE_URL}/logos/scott-apps-banner.png?v=3`,
-        alt: "Scott Applications — Services for Central Texas Businesses",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Services | Scott Applications",
-    description:
-      "Web design, custom software, graphic design, and digital marketing for Central Texas. Fixed pricing, full ownership.",
-    images: [`${BASE_URL}/logos/scott-apps-banner.png?v=3`],
+    title: "Garage Door Services | Summit Door Pros",
+    description: "Repair, springs, openers & more for Central Texas. IDA-trained.",
   },
   robots: { index: true, follow: true },
 };
@@ -60,85 +39,30 @@ export const metadata: Metadata = {
 const offerCatalogSchema = {
   "@context": "https://schema.org",
   "@type": "OfferCatalog",
-  name: "Scott Applications — Digital Services",
+  name: "Summit Door Pros — Garage Door Services",
   description:
-    "Full-service digital agency offerings for Central Texas businesses: web design, custom software, graphic design, and digital marketing.",
+    "Residential and commercial garage door services for Waco and Central Texas: repair, springs & cables, new doors, openers, maintenance, and commercial doors.",
   provider: {
-    "@type": "LocalBusiness",
-    name: "Scott Applications",
+    "@type": "HomeAndConstructionBusiness",
+    name: "Summit Door Pros",
     url: BASE_URL,
-    telephone: "+12549002520",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Waco",
-      addressRegion: "TX",
-      addressCountry: "US",
-    },
+    telephone: "+12547201100",
+    address: { "@type": "PostalAddress", addressLocality: "Waco", addressRegion: "TX", addressCountry: "US" },
   },
   itemListElement: [
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Website Design",
-        description:
-          "Mobile-first, SEO-optimized websites built on Next.js for Central Texas businesses. Fixed price, you own everything.",
-        url: `${BASE_URL}/services/website-design`,
-      },
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Software Engineering",
-        description:
-          "Custom CRMs, client portals, business tools, and web applications. Fixed price, direct developer access.",
-        url: `${BASE_URL}/services/software-engineering`,
-      },
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Graphic Design",
-        description:
-          "Custom logos, brand identities, and marketing collateral. Unlimited revisions, full source file ownership.",
-        url: `${BASE_URL}/services/graphic-design`,
-      },
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Digital Marketing & Local SEO",
-        description:
-          "Local SEO, Google Ads, Google Business Profile management, and social media. Month-to-month, no contracts.",
-        url: `${BASE_URL}/services/marketing-solutions`,
-      },
-    },
-  ],
-};
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home",     item: BASE_URL },
-    { "@type": "ListItem", position: 2, name: "Services", item: url },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Garage Door Repair", url: `${BASE_URL}/services/garage-door-repair` } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Spring & Cable Repair", url: `${BASE_URL}/services/spring-cable-repair` } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "New Door Installation", url: `${BASE_URL}/services/new-door-installation` } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Opener Installation", url: `${BASE_URL}/services/opener-installation` } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Door Maintenance Plans", url: `${BASE_URL}/services/door-maintenance` } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial Doors", url: `${BASE_URL}/services/commercial-doors` } },
   ],
 };
 
 export default function ServicesLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(offerCatalogSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerCatalogSchema) }} />
       {children}
     </>
   );

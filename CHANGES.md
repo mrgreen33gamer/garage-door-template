@@ -1,4 +1,4 @@
-# Arctic Air HVAC — UI Changes Package
+# Summit Door Pros — UI Changes Package
 
 ## How to apply
 
@@ -86,8 +86,8 @@ All file paths match your project structure exactly.
 
 ### PageComponents/ContactForms/Variant1
 - **styles.module.scss** — Full redesign. Dark obsidian root bg with diagonal pattern.
-  Left panel: dark with orange gradient tint, logo mark, trust items, stats, star review.
-  Right panel: white form with orange accents, clipped submit button. Two-column fields.
+  Left door system: dark with orange gradient tint, logo mark, trust items, stats, star review.
+  Right door system: white form with orange accents, clipped submit button. Two-column fields.
 
 ### PageComponents/ContactForms/Variant2
 - **styles.module.scss** — Full redesign. White card with dark header band. Icon service

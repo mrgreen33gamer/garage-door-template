@@ -1,35 +1,35 @@
 // src/app/contact/layout.tsx
 import type { Metadata } from 'next';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://hvac-pro-template.vercel.app';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.summitdoorpros.com';
 const url = `${BASE_URL}/contact`;
 
 export const metadata: Metadata = {
-  title: 'Contact Arctic Air HVAC | Schedule Service in Waco & Central Texas',
+  title: 'Contact Summit Door Pros | Schedule Service in Waco & Central Texas',
   description:
-    'Contact Arctic Air HVAC to schedule AC repair, heating service, or a free estimate. Serving Waco, Hewitt, Killeen, Temple, and all of Central Texas. Call (254) 900-1234.',
+    'Contact Summit Door Pros to schedule garage door repair, spring & cable repair, or a free estimate. Serving Waco, Hewitt, Killeen, Temple, and all of Central Texas. Call (254) 720-1100.',
   keywords: [
-    'contact Arctic Air HVAC',
-    'HVAC service Waco TX',
-    'schedule AC repair Waco',
-    'HVAC estimate Central Texas',
-    'Arctic Air contact',
-    '254-900-1234',
+    'contact Summit Door Pros',
+    'garage door service Waco TX',
+    'schedule garage door repair Waco',
+    'garage door estimate Central Texas',
+    'Summit Door Pros contact',
+    '254-720-1100',
   ],
   alternates: { canonical: url },
   openGraph: {
-    title: 'Contact Arctic Air HVAC | Schedule Service in Waco & Central Texas',
+    title: 'Contact Summit Door Pros | Schedule Service in Waco & Central Texas',
     description:
-      'Call, text, or submit a request. Same-day service available. Flat-rate pricing, 1-year warranty, NATE-certified techs.',
+      'Call, text, or submit a request. Same-day service available. Flat-rate pricing, Lifetime Spring Warranty + 2-Year Workmanship, IDA-trained garage door technicians.',
     url,
-    siteName: 'Arctic Air HVAC',
+    siteName: 'Summit Door Pros',
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Arctic Air HVAC | Waco & Central Texas',
-    description: 'Schedule HVAC service or get a free estimate. Call (254) 900-1234.',
+    title: 'Contact Summit Door Pros | Waco & Central Texas',
+    description: 'Schedule garage door service or get a free estimate. Call (254) 720-1100.',
   },
 };
 
