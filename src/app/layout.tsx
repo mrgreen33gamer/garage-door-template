@@ -125,7 +125,7 @@ export const metadata: Metadata = {
     siteName: "Summit Door Pros",
     images: [
       {
-        url: `${BASE_URL}/logos/scott-apps-banner.png?v=1`,
+        url: `${BASE_URL}/pages/home/welcome/hero-main.jpg`,
         width: 1200,
         height: 630,
         alt: "Summit Door Pros — Waco TX Garage Door Repair & Installation",
@@ -139,7 +139,7 @@ export const metadata: Metadata = {
     title: "Summit Door Pros | Waco TX Garage Door Pros",
     description:
       "Garage door repair, spring & cable service, new installations & openers for Central Texas. IDA-trained & insured — lifetime spring warranty.",
-    images: [`${BASE_URL}/logos/scott-apps-banner.png?v=1`],
+    images: [`${BASE_URL}/pages/home/welcome/hero-main.jpg`],
   },
   robots: {
     index: true,

@@ -63,14 +63,14 @@ export default function HomePage() {
       title: "Door Maintenance Plans",
       body: "Tune-ups, lubrication, balance checks, and safety reverse testing so small issues never leave you stranded.",
       link: "/services/door-maintenance",
-      image: "/pages/home/services/service-1.jpg",
+      image: "/pages/home/welcome/before.jpg",
     },
     {
       icon: faBuilding,
       title: "Commercial Doors",
       body: "Rolling steel, sectional, and high-cycle commercial door service for warehouses, retail, and multi-unit properties.",
       link: "/services/commercial-doors",
-      image: "/pages/home/services/service-2.jpg",
+      image: "/pages/home/welcome/after.jpg",
     },
   ];
 
